@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+option java_package = "notquiteafs.grpc";
+
+package notquiteafs;
+
+service ServerService {
+    rpc ServerMethod (ServerRequest) returns (ServerResponse) {}
+}
+
+message ServerRequest {
+    string request_server_field = 1;
+}
+
+message ServerResponse {
+    string response_server_field = 1;
+}
